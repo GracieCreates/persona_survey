@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Serif+Display:wght@300;400&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <title>Persona Survey</title>
+</head>
+<body>
+<!-- 1st FieldSet -->
+    <h1 id="title">Persona Survey</h1>    
+    <p id="description">Help us tailor our services to your needs with our persona survey</p>
+
+    <form method="post" action="mailto:example@example.com" id="survey-form">
+  
+        <fieldset>
+            <label for="name" id="name-label">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name" required />
+
+            <label for="email" id="email-label">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Enter email" required />
+
+            <label for="number" id="number-label">What score out of 10 would you give AI Alice:</label>
+            <input id="number" type="number" name="number" min="1" max="10" placeholder="Enter a number between 1-10" pattern="[0-9]+">
+        </fieldset>
+
+
+<!-- 2nd FieldSet: Dropdown-->
+
+        <fieldset>   
+            <label for="dropdown">What's your current role?
+                <select id="dropdown" name="dropdown">
+                  <option value="">(please select)</option>
+                  <option value="1">Marketing</option>
+                  <option value="2">Sales</option>
+                  <option value="3">Customer Success</option>
+                  <option value="4">Other</option>
+                </select>
+              </label>
+     <!-- 2nd FieldSet: 2 Radio button-->
+            <label for="question">What would you use AI ALICE for?</label>
+            <div>
+                <label for="question-work"><input type="radio" name="question-options" id="question-work" value="option1">Work</label>
+                <label for="question-personal"><input type="radio" name="question-options" id="question-personal" value="option2">Personal</label>
+                <label for="question-education"><input type="radio" name="question-options" id="question-education" value="option3">Education</label>
+            </div>
+            
+            <label for="recommendation">Would you recommend AI ALICE to a friend?</label>
+            <div>
+                <label for="recommendation-yes"><input type="radio" name="recommendation-options" id="recommendation-yes" value="option1">Definitely</label>
+                <label for="recommendation-maybe"><input type="radio" name="recommendation-options" id="recommendation-maybe" value="option2">Maybe</label>
+                <label for="recommendation-no"><input type="radio" name="recommendation-options" id="recommendation-no" value="option3">I don't think so</label>
+            </div>     
+            </div>    
+            </fieldset>
+
+    <!-- 3rd FieldSet: 2 Checkbox-->
+        <fieldset>
+            <label for="webinar">What kind of Webinar would you like to attend? </label>
+                <div>
+                    <label for="tutorial"><input type="checkbox" name="tutorial" id="tutorial" value="tutorial">Tutorial</label>
+                    <label for="Tech-Trends"><input type="checkbox" name="Tech-Trends" id="Tech-Trends" value="tutorial">Tech Trends</label>
+                    <label for="Features"><input type="checkbox" name="Features" id="Features" value="Features">New Features</label>
+                </div>
+
+                <label for="topics">What Kind of Topics Would You Like us to Cover More? </label>
+                <div>
+                    <label for="automation-tricks"><input type="checkbox" name="automation-tricks" id="automation-tricks" value="automation-tricks">Automation Tricks</label>
+                    <label for="User-Stories"><input type="checkbox" name="User-Stories" id="User-Stories" value="User-Stories">User Stories</label>
+                    <label for="Feature-update"><input type="checkbox" name="Feature-update" id="Feature-update" value="Feature-update">Feature Update</label>
+                </div>
+        </fieldset>
+    <!-- 4th FieldSet: TextArea-->
+    <fieldset>
+        <label for="suggestion">We'd Really love to hear from you. How are you feeling about AI Alice:
+            <textarea id="suggestion" name="suggestion" rows="3" cols="30" placeholder="I am interested in learning more about the Mad Hatter feature..."></textarea>
+        </label> 
+        
+    </fieldset>
+    <input type="submit" id="submit" value="Submit" />
+    </form>
+</body>
+</html>
